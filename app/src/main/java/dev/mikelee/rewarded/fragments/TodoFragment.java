@@ -57,6 +57,14 @@ public class TodoFragment extends Fragment {
             }
         });
 
+        FloatingActionButton todoAddButton = view.findViewById(R.id.todoAddButton);
+        todoAddButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                todoViewModel.insert(new Todo("new todo", false, 9));
+            }
+        });
+
         return view;
     }
 }
